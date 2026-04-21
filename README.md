@@ -24,19 +24,28 @@ Aplicativo de rastreamento de hábitos com sistema de streaks diários.
 ## 🚀 Como rodar localmente
 
 ```bash
-# Clone o repositório
 git clone https://github.com/lainefdev/habit-tracker.git
-
-# Entre na pasta
 cd habit-tracker
-
-# Instale as dependências
 npm install
-
-# Rode o projeto
 npm run dev
 ```
 
 Acesse `http://localhost:5173` no browser.
 
 ## 📁 Estrutura do projeto
+
+```
+src/
+  components/
+    HabitCard.tsx       # Card individual de cada hábito
+    AddHabitModal.tsx   # Modal de criação de hábito
+  hooks/
+    useHabits.ts        # Lógica de hábitos e streaks
+  types/
+    index.ts            # Tipos TypeScript
+  App.tsx               # Componente principal
+```
+
+## 👩‍💻 Autora
+
+Feito por [Laíne Ferreira](https://linkedin.com/in/laineferreira)
