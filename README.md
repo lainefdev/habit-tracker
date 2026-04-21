@@ -4,7 +4,7 @@ Aplicativo de rastreamento de hábitos com sistema de streaks diários.
 
 ## 🖥️ Demo
 
-> Em breve — deploy no Vercel
+> [habit-tracker-iota-green.vercel.app](https://habit-tracker-iota-green.vercel.app/)
 
 ## ✨ Funcionalidades
 
