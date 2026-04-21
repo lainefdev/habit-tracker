@@ -7,7 +7,7 @@ const DAYS = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sáb
 const MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
 
 export default function App() {
-  const { habits, addHabit, toggleToday, calcStreak, getLast7Days, todayKey } = useHabits()
+  const { habits, addHabit, toggleToday, deleteHabit, calcStreak, getLast7Days, todayKey } = useHabits()
   const [showModal, setShowModal] = useState(false)
 
   const today = new Date()
@@ -48,6 +48,7 @@ export default function App() {
                 last7={last7}
                 todayKey={currentDay}
                 onToggle={toggleToday}
+                onDelete={deleteHabit}
               />
             ))}
           </div>

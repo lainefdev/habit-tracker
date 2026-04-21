@@ -6,11 +6,12 @@ interface Props {
   last7: string[]
   todayKey: string
   onToggle: (id: string) => void
+  onDelete: (id: string) => void
 }
 
 const DAYS = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S']
 
-export default function HabitCard({ habit, streak, last7, todayKey, onToggle }: Props) {
+export default function HabitCard({ habit, streak, last7, todayKey, onToggle, onDelete }: Props) {
   const doneToday = habit.completedDates.includes(todayKey)
 
   return (
@@ -25,9 +26,18 @@ export default function HabitCard({ habit, streak, last7, todayKey, onToggle }: 
           </div>
           <span className="font-medium text-gray-800">{habit.name}</span>
         </div>
-        <div className="flex items-center gap-1 text-orange-500 font-mono text-sm font-medium">
-          <span>🔥</span>
-          <span>{streak}</span>
+
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 text-orange-500 font-mono text-sm font-medium">
+            <span>🔥</span>
+            <span>{streak}</span>
+          </div>
+          <button
+            onClick={() => onDelete(habit.id)}
+            className="text-gray-300 hover:text-red-400 transition-colors text-sm"
+          >
+            ✕
+          </button>
         </div>
       </div>
 

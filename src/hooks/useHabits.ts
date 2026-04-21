@@ -43,6 +43,10 @@ export function useHabits() {
     )
   }
 
+  function deleteHabit(id: string) {
+    setHabits(prev => prev.filter(h => h.id !== id))
+  }
+
   function calcStreak(habit: Habit): number {
     let streak = 0
     const d = new Date()
@@ -64,5 +68,5 @@ export function useHabits() {
     })
   }
 
-  return { habits, addHabit, toggleToday, calcStreak, getLast7Days, todayKey }
+  return { habits, addHabit, toggleToday, deleteHabit, calcStreak, getLast7Days, todayKey }
 }
